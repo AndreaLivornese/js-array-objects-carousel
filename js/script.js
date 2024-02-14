@@ -60,11 +60,24 @@ for (let i = 0; i < images.length; i++) {
     const imgTxtEl= document.createElement("div");
     imgTxtEl.classList.add("img-txt");
 
+
+
+    const thumbnailsEl=document.querySelector("#thumbnails");
+
+    const colEl=document.createElement("div");
+    colEl.classList.add("col");
+
+
+    const thumbnailsImgEl= document.createElement("img");
+
     for(let key in images[i]){
 
         if(key == "image"){
-            // sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
+            // inserisco il link dell'i-esima immagine all'elemento img dello slider
             imgEl.src = images[i].image;
+
+            // inserisco il link dell'i-esima immagine all'elemento img della thumbnails
+            thumbnailsImgEl.src = images[i].image;
         }else if(key == "title"){
             // scrivo all'interno dell'elemento
             imgNameEl.innerText = images[i].title;
@@ -80,6 +93,12 @@ for (let i = 0; i < images.length; i++) {
 
         // inserisco l'immagine e il container nello slider
         sliderElement.append(imgEl, infoEl);
+
+        // inserisco l'immagine della thumbnails nella colonna
+        colEl.append(thumbnailsImgEl);
+
+        // inserisco la colonna nella thumbnails
+        thumbnailsEl.append(colEl);
 
     }
 

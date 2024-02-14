@@ -66,18 +66,19 @@ for (let i = 0; i < images.length; i++) {
             // sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
             imgEl.src = images[i].image;
         }else if(key == "title"){
-
+            // scrivo all'interno dell'elemento
             imgNameEl.innerText = images[i].title;
 
         }else{
-
+            // scrivo all'interno dell'elemento
             imgTxtEl.innerText = images[i].text;
 
         }
 
+        // inserisco gli elementi del titolo e descrizione dell'immagine nell'elemento del container
         infoEl.append(imgNameEl, imgTxtEl);
 
-
+        // inserisco l'immagine e il container nello slider
         sliderElement.append(imgEl, infoEl);
 
     }

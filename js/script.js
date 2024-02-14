@@ -325,7 +325,7 @@ document.querySelector(".col:nth-of-type(5)").addEventListener("click", ()=>{
 
 document.querySelector("#btn-autoplay").addEventListener("click", ()=>{
 
-    const play = setInterval(autoPlay, 3 *1000);
+    const play = setInterval(autoPlay, 1 *1000);
 
 
     document.querySelector("#btn-stop").addEventListener("click", ()=>{
@@ -334,12 +334,12 @@ document.querySelector("#btn-autoplay").addEventListener("click", ()=>{
 
 });
 
-
-
+// variabile che decide il "verso" dello slide: vero verso "destra", falso verso "sinistra" (seguendo in questo caso lo slider creato) 
+let verso=true;
 
 function autoPlay(){
 
-
+    if(verso){
     if (slideNumber < images.length) {
 
         // - prendo l'immagine attuale e le rimuovo la classe "active"  
@@ -379,5 +379,59 @@ function autoPlay(){
 
     }
 
+}else{
+
+    if (slideNumber > 1) {
+        // - prendo l'immagine attuale e le rimuovo la classe "active"  
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+        // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+        // - diminuisco il contatore di 1
+        slideNumber--;
+
+        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+        // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+        console.log(slideNumber);
+
+    } else {
+
+        console.log("sasso");
+
+        // - prendo l'immagine attuale e le rimuovo la classe "active"  
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+        // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+        // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
+        slideNumber = images.length;
+
+        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+        // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    }
 
 }
+
+
+}
+
+
+document.querySelector("#btn-inverti").addEventListener("click", ()=>{
+
+    if(!verso){
+        verso=true;
+    }else{
+        verso=false;
+    }
+
+})

@@ -69,3 +69,34 @@
     transform: scale(1.2);
 }
 
+
+/* my css */
+
+.info-container:not(.active){
+    display: none;
+}
+
+.info-container{
+    position: absolute;
+
+    right:10px;
+    bottom:0;
+
+    color:white;
+    text-align: end;
+}
+
+
+.img-name{
+    font-size:1.5em;
+    font-weight: bold;
+
+}
+
+
+.img-txt{
+
+    font-size:1.2em;
+    font-weight: 600;
+
+}

@@ -50,15 +50,15 @@ for (let i = 0; i < images.length; i++) {
 
     // creo il contenitore delle informazioni delle immagini
     const infoEl= document.createElement("div");
-    infoEl.id="info-container";
+    infoEl.classList.add("info-container");
 
     // creo l'elemento per il nome dell'immagine
     const imgNameEl= document.createElement("div");
-    imgNameEl.id="img-name";
+    imgNameEl.classList.add("img-name");
 
     // creo l'elemento per la descrizione dell'immagine
     const imgTxtEl= document.createElement("div");
-    imgTxtEl.id="img-txt";
+    imgTxtEl.classList.add("img-txt");
 
     for(let key in images[i]){
 

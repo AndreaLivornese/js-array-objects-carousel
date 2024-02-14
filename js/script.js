@@ -108,6 +108,7 @@ for (let i = 0; i < images.length; i++) {
 
 document.querySelector("#slider img:nth-of-type(1)").className = "active";
 document.querySelector("#slider img:nth-of-type(1) + .info-container").classList.add("active");
+document.querySelector("#thumbnails .col").classList.add("thumbnailsActive");
 
 /*
 -  salvo un contatore della slide
@@ -133,6 +134,9 @@ document.querySelector("#up-arrow").addEventListener("click", function() {
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // - aumento il contatore di 1
         slideNumber++;
 
@@ -142,7 +146,8 @@ document.querySelector("#up-arrow").addEventListener("click", function() {
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
 
-        console.log(slideNumber);
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
         
 
     } else {
@@ -153,6 +158,9 @@ document.querySelector("#up-arrow").addEventListener("click", function() {
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // resetto la variabile che mi conta l'immagine a cui sono arrivato
         slideNumber = 1;
 
@@ -161,6 +169,9 @@ document.querySelector("#up-arrow").addEventListener("click", function() {
 
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     }
 
@@ -177,6 +188,9 @@ document.querySelector("#down-arrow").addEventListener("click", function() {
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // - diminuisco il contatore di 1
         slideNumber--;
 
@@ -186,17 +200,19 @@ document.querySelector("#down-arrow").addEventListener("click", function() {
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
 
-        console.log(slideNumber);
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     } else {
-
-        console.log("sasso");
 
         // - prendo l'immagine attuale e le rimuovo la classe "active"  
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
 
         // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
         slideNumber = images.length;
@@ -206,6 +222,9 @@ document.querySelector("#down-arrow").addEventListener("click", function() {
 
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     }
     
@@ -227,6 +246,9 @@ document.querySelector(".col:nth-of-type(1)").addEventListener("click", ()=>{
     // prendo l'info box attuale e gli rimuovo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
     // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
     slideNumber = 1;
 
@@ -235,6 +257,9 @@ document.querySelector(".col:nth-of-type(1)").addEventListener("click", ()=>{
 
     // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
 });
 
@@ -247,6 +272,9 @@ document.querySelector(".col:nth-of-type(2)").addEventListener("click", ()=>{
     // prendo l'info box attuale e gli rimuovo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
     // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
     slideNumber = 2;
 
@@ -255,6 +283,9 @@ document.querySelector(".col:nth-of-type(2)").addEventListener("click", ()=>{
 
     // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
 });
 
@@ -267,6 +298,9 @@ document.querySelector(".col:nth-of-type(3)").addEventListener("click", ()=>{
     // prendo l'info box attuale e gli rimuovo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
     // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
     slideNumber = 3;
 
@@ -275,6 +309,9 @@ document.querySelector(".col:nth-of-type(3)").addEventListener("click", ()=>{
 
     // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
 });
 
@@ -287,6 +324,9 @@ document.querySelector(".col:nth-of-type(4)").addEventListener("click", ()=>{
     // prendo l'info box attuale e gli rimuovo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
     // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
     slideNumber = 4;
 
@@ -295,6 +335,9 @@ document.querySelector(".col:nth-of-type(4)").addEventListener("click", ()=>{
 
     // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
 });
 
@@ -307,6 +350,9 @@ document.querySelector(".col:nth-of-type(5)").addEventListener("click", ()=>{
     // prendo l'info box attuale e gli rimuovo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
     // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
     slideNumber = 5;
 
@@ -315,6 +361,9 @@ document.querySelector(".col:nth-of-type(5)").addEventListener("click", ()=>{
 
     // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
     document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+    // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+    document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
 });
 
@@ -348,6 +397,9 @@ function autoPlay(){
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // - aumento il contatore di 1
         slideNumber++;
 
@@ -357,7 +409,8 @@ function autoPlay(){
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
 
-        console.log(slideNumber);
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
         
 
     } else {
@@ -368,6 +421,9 @@ function autoPlay(){
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // resetto la variabile che mi conta l'immagine a cui sono arrivato
         slideNumber = 1;
 
@@ -376,6 +432,9 @@ function autoPlay(){
 
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     }
 
@@ -388,6 +447,9 @@ function autoPlay(){
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
 
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
+
         // - diminuisco il contatore di 1
         slideNumber--;
 
@@ -397,17 +459,19 @@ function autoPlay(){
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
 
-        console.log(slideNumber);
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     } else {
-
-        console.log("sasso");
 
         // - prendo l'immagine attuale e le rimuovo la classe "active"  
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
         // prendo l'info box attuale e gli rimuovo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.remove("thumbnailsActive");
 
         // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
         slideNumber = images.length;
@@ -417,6 +481,9 @@ function autoPlay(){
 
         // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+        // aggiungo la classe "thumbnailsActive" alla col della thumbnails con il nuovo contatore
+        document.querySelector(`#thumbnails .col:nth-of-type(${slideNumber})`).classList.add("thumbnailsActive");
 
     }
 

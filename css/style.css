@@ -119,3 +119,10 @@
 
     overflow: hidden;
 }
+
+
+.thumbnailsActive img{
+
+    filter: brightness(50%);
+
+}

@@ -212,3 +212,109 @@ document.querySelector("#down-arrow").addEventListener("click", function() {
 
 
 });
+
+
+
+
+
+//  script per le thumbnails 
+
+document.querySelector(".col:nth-of-type(1)").addEventListener("click", ()=>{
+
+    // - prendo l'immagine attuale e le rimuovo la classe "active"  
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+    // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+    // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
+    slideNumber = 1;
+
+    // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+})
+
+
+document.querySelector(".col:nth-of-type(2)").addEventListener("click", ()=>{
+
+    // - prendo l'immagine attuale e le rimuovo la classe "active"  
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+    // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+    // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
+    slideNumber = 2;
+
+    // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+})
+
+
+document.querySelector(".col:nth-of-type(3)").addEventListener("click", ()=>{
+
+    // - prendo l'immagine attuale e le rimuovo la classe "active"  
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+    // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+    // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
+    slideNumber = 3;
+
+    // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+})
+
+
+document.querySelector(".col:nth-of-type(4)").addEventListener("click", ()=>{
+
+    // - prendo l'immagine attuale e le rimuovo la classe "active"  
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+    // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+    // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
+    slideNumber = 4;
+
+    // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+})
+
+
+document.querySelector(".col:nth-of-type(5)").addEventListener("click", ()=>{
+
+    // - prendo l'immagine attuale e le rimuovo la classe "active"  
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+
+    // prendo l'info box attuale e gli rimuovo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.remove("active");
+
+    // - metto il valore di slideNumebr = alla posizione dell'immagine scelta
+    slideNumber = 5;
+
+    // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+    document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+
+    // - prendo info-box con il nuovo contatore e le aggiungo la classe "active"
+        document.querySelector(`#slider img:nth-of-type(${slideNumber}) + .info-container`).classList.add("active");
+
+})
+

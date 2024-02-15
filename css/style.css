@@ -120,6 +120,9 @@
     overflow: hidden;
 }
 
+#thumbnails .col:hover{
+    cursor: pointer;
+}
 
 .thumbnailsActive img{
 
